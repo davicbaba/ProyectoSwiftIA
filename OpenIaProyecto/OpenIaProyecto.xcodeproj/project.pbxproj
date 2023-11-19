@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8B3AEEF22B097767001269EE /* OpenIaProyectoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AEEF12B097767001269EE /* OpenIaProyectoApp.swift */; };
-		8B3AEEF42B097767001269EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AEEF32B097767001269EE /* ContentView.swift */; };
 		8B3AEEF62B097768001269EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AEEF52B097768001269EE /* Assets.xcassets */; };
 		8B3AEEF92B097768001269EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AEEF82B097768001269EE /* Preview Assets.xcassets */; };
+		8B3AEF022B097933001269EE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AEF012B097933001269EE /* Message.swift */; };
+		8B3AEF042B097956001269EE /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AEF032B097956001269EE /* ChatViewModel.swift */; };
+		8B3AEF062B097A50001269EE /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AEF052B097A50001269EE /* ChatView.swift */; };
+		8B3AEF092B097B5D001269EE /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 8B3AEF082B097B5D001269EE /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B3AEEEE2B097767001269EE /* OpenIaProyecto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenIaProyecto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3AEEF12B097767001269EE /* OpenIaProyectoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenIaProyectoApp.swift; sourceTree = "<group>"; };
-		8B3AEEF32B097767001269EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B3AEEF52B097768001269EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3AEEF82B097768001269EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B3AEF012B097933001269EE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8B3AEF032B097956001269EE /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		8B3AEF052B097A50001269EE /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3AEF092B097B5D001269EE /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +57,12 @@
 		8B3AEEF02B097767001269EE /* OpenIaProyecto */ = {
 			isa = PBXGroup;
 			children = (
+				8B3AEF002B09791A001269EE /* ViewModel */,
+				8B3AEEFF2B097911001269EE /* Model */,
 				8B3AEEF12B097767001269EE /* OpenIaProyectoApp.swift */,
-				8B3AEEF32B097767001269EE /* ContentView.swift */,
 				8B3AEEF52B097768001269EE /* Assets.xcassets */,
 				8B3AEEF72B097768001269EE /* Preview Content */,
+				8B3AEF052B097A50001269EE /* ChatView.swift */,
 			);
 			path = OpenIaProyecto;
 			sourceTree = "<group>";
@@ -65,6 +73,22 @@
 				8B3AEEF82B097768001269EE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B3AEEFF2B097911001269EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B3AEF012B097933001269EE /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B3AEF002B09791A001269EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B3AEF032B097956001269EE /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,9 @@
 			dependencies = (
 			);
 			name = OpenIaProyecto;
+			packageProductDependencies = (
+				8B3AEF082B097B5D001269EE /* SwiftOpenAI */,
+			);
 			productName = OpenIaProyecto;
 			productReference = 8B3AEEEE2B097767001269EE /* OpenIaProyecto.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 8B3AEEE52B097767001269EE;
+			packageReferences = (
+				8B3AEF072B097B5D001269EE /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+			);
 			productRefGroup = 8B3AEEEF2B097767001269EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B3AEEF42B097767001269EE /* ContentView.swift in Sources */,
+				8B3AEF062B097A50001269EE /* ChatView.swift in Sources */,
+				8B3AEF022B097933001269EE /* Message.swift in Sources */,
+				8B3AEF042B097956001269EE /* ChatViewModel.swift in Sources */,
 				8B3AEEF22B097767001269EE /* OpenIaProyectoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B3AEF072B097B5D001269EE /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B3AEF082B097B5D001269EE /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B3AEF072B097B5D001269EE /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B3AEEE62B097767001269EE /* Project object */;
 }
